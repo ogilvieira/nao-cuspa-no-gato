@@ -1,0 +1,21 @@
+{
+  "name": "viihtube-survivor",
+  "homepage": "https://github.com/ogilvieira/viihtube-survivor",
+  "authors": [
+    "Gil Vieira <ogilvieira@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "^2.6.2"
+  }
+}
