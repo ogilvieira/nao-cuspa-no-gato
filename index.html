@@ -6,21 +6,21 @@
   <title>Viih Tube Survivor</title>
   <style>
     body {
-      background: #ccc;
+      background: #000;
       margin: 0;
       padding: 0;
     }
     #screen {
       margin: 0 auto;
-      height: 100%;
-      width: 100%;
-      max-width:640px;
-      max-height:960px;
+      width: auto;
+      height: 100vh;
       position: relative;
       overflow: hidden;
     }
     canvas {
-      width: 100%;
+      display: block;
+      position: absolute;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -29,8 +29,10 @@
   <script src="bower_components/phaser/build/phaser.js"></script>
   <script src="assets/js/Config.js"></script>
   <script src="assets/js/Autoload.js"></script>
+  <script src="assets/js/Gameplay.js"></script>
   <script src="assets/js/Preload.js"></script>
   <script src="assets/js/Create.js"></script>
+  <script src="assets/js/Render.js"></script>
   <script src="assets/js/Update.js"></script>
   <script src="assets/js/app.js"></script>
 </body>

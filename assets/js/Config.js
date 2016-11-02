@@ -3,16 +3,18 @@ var APP = APP || {};
 APP.Config = (function(){
 	var obj = {}
 	
-	obj.GAP = 30;
+	obj.STATUS = 'INTRO'; //INTRO, PLAY, GAMEOVER
+	obj.GAP = 15;
+	obj.AF = 0;
 	obj.SCORE = 0;
 	obj.SCORESTRING = '';
-	obj.SCORETEXT = '';
+	obj.SCORETEXT = null;
 	obj.CURSORS = null;
 	
 	obj.PLAYER = null;
 	obj.GUN = null;
 	obj.SPLIT = null;
-	obj.actualPost = 0;
+	obj.actualPos = 2;
 
 	obj.TOP = null;
 	obj.FOOTER = null;
@@ -24,8 +26,7 @@ APP.Config = (function(){
 	obj.shotTypes = [
 		{ name: 'split', power: 1 },
 		{ name: 'split-medium', power: 2 },
-		{ name: 'split-big', power: 3 },
-		{ name: 'split-fruit', power: 2 }
+		{ name: 'split-big', power: 3 }
 	];
 
 	return obj;

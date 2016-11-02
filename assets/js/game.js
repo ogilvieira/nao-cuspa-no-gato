@@ -1,6 +1,6 @@
 var game = new Phaser.Game(
-	640, 
-	960, 
+	640,
+	960,
 	Phaser.AUTO, 
 	'screen', 
 	{ 
@@ -88,16 +88,12 @@ function create() {
     SPLIT.physicsBodyType = Phaser.Physics.ARCADE;
 	
 	// CREATE BUTTONS
-	btnLeft = game.add.button(5, game.world.height-105, 'btn', function(){ 
-		console.log('LEFT');
-	}, this, 2, 3, 0);
-	btnRight = game.add.button(325, game.world.height-105, 'btn', function(){ 
-		console.log('RIGHT'); 
-	}, this, 2, 3, 0);
+	btnLeft = game.add.button(5, game.world.height-105, 'btn', function(){ console.log('LEFT') }, this, 2, 3, 0);
+	btnRight = game.add.button(325, game.world.height-105, 'btn', function(){ console.log('RIGHT') }, this, 2, 3, 0);
 
 
     //  The score
-    scoreString = 'Pontos : ';
+    scoreString = 'Score : ';
     scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
 }
 
@@ -140,8 +136,6 @@ function update() {
 		}
 
 		PLAYER.body.position.x = (actualPos*PLAYER.body.width)+20;
-	} else {
-		
 	}
 }
 
