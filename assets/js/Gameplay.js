@@ -26,14 +26,14 @@ APP.Gameplay = (function(Phaser){
   };
 
   obj.toLeft = function(){
-    if(APP.Config.actualPos > 0){ 
+    if(APP.Config.actualPos > 0  && APP.Config.STATUS == 'PLAY'){ 
       APP.Config.actualPos--
       btnSound.play();
     }
   };
 
   obj.toRight = function(){
-    if(APP.Config.actualPos < 4){
+    if(APP.Config.actualPos < 4 && APP.Config.STATUS == 'PLAY'){
       APP.Config.actualPos++
       btnSound.play();
     }
