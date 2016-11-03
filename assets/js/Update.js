@@ -34,9 +34,10 @@ APP.Update = function(){
 	        splitShot.power = shotType.power;
 	        splitShot.shotName = shotType.name;
 	        splitShot.body.collideWorldBounds = false;
-	        splitShot.body.gravity.y = 3000;
+	        splitShot.body.gravity.y = 2000;
 	        splitShot.checkWorldBounds = true;
 	        splitShot.events.onOutOfBounds.add(APP.Gameplay.splitOut, this);
+	        coughSound.play();
 		}
 
 		GAME.physics.arcade.collide(APP.Config.PLAYER, APP.Config.SPLIT, APP.Gameplay.collisionHandler, null, this);

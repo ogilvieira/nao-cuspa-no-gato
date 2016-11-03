@@ -8,6 +8,8 @@ APP.Gameplay = (function(Phaser){
     split.destroy(true);
     APP.Config.PLAYER.isAlive = false;
     APP.Config.STATUS = 'GAMEOVER';
+    bgSong.play();
+    gameoverSound.play();
   }
 
   obj.splitOut = function(split) {
@@ -21,14 +23,20 @@ APP.Gameplay = (function(Phaser){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
-  }
+  };
 
   obj.toLeft = function(){
-    if(APP.Config.actualPos > 0){ APP.Config.actualPos-- }
+    if(APP.Config.actualPos > 0){ 
+      APP.Config.actualPos--
+      btnSound.play();
+    }
   };
 
   obj.toRight = function(){
-    if(APP.Config.actualPos < 4){ APP.Config.actualPos++ }
+    if(APP.Config.actualPos < 4){
+      APP.Config.actualPos++
+      btnSound.play();
+    }
   };
 
   obj.restart = function(){
@@ -38,6 +46,7 @@ APP.Gameplay = (function(Phaser){
     APP.Config.PLAYER.isAlive = true;
     APP.Config.AF = 0;
     APP.Config.GAP = 40;
+    bgSong.stop();
   };
 
   obj.getShotPos = function(){

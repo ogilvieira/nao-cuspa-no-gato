@@ -18,4 +18,9 @@ APP.Preload = function(){
   GAME.load.image('split-medium', 'assets/img/split-medium.png');
   GAME.load.image('split-big', 'assets/img/split-big.png');
   GAME.load.image('split-fruit', 'assets/img/split-fruit.png');
+
+  GAME.load.audio('bgsong', ['assets/sound/bg.mp3', 'assets/sound/bg.ogg']);
+  GAME.load.audio('btnSound', ['assets/sound/btn.mp3', 'assets/sound/btn.ogg']);
+  GAME.load.audio('gameoverSound', ['assets/sound/gameover.mp3', 'assets/sound/gameover.ogg']);
+  GAME.load.audio('coughSound', ['assets/sound/cough.mp3', 'assets/sound/cough.ogg']);
 };
