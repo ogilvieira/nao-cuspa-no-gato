@@ -101,7 +101,7 @@ APP.Gameplay = (function(Phaser){
     //Set Gameover
 
     bgGameOver = GAME.add.sprite(0, 60, 'bg-gameover');
-    btnRestart = GAME.add.button(137, 812, 'btn-restart', obj.restart, this, 2, 3, 0);
+    btnRestart = GAME.add.button(137, 615, 'btn-restart', obj.restart, this, 2, 3, 0);
     bgGameOver.visible = false;
     btnRestart.visible = false;
 
