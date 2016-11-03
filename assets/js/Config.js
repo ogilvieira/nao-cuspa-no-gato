@@ -4,7 +4,8 @@ APP.Config = (function(){
 	var obj = {}
 	
 	obj.STATUS = 'INTRO'; //INTRO, PLAY, GAMEOVER
-	obj.GAP = 20;
+	obj.GAP = 50;
+	obj.GAPDEFAULT = 50;
 	obj.AF = 0;
 	obj.SCORE = 0;
 	obj.SCORESTRING = '';

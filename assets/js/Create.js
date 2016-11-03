@@ -23,5 +23,7 @@ APP.Create = function(){
 	// GAME.scale.setScreenSize(true);
 	GAME.scale.refresh();
 
+	spaceKey = GAME.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
 	// GAME.load.start();
 };

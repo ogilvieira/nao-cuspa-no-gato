@@ -37,6 +37,7 @@ APP.Gameplay = (function(Phaser){
     APP.Config.STATUS = 'PLAY';
     APP.Config.PLAYER.isAlive = true;
     APP.Config.AF = 0;
+    APP.Config.GAP = 40;
   };
 
   obj.init = function(callback){

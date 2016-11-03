@@ -5,6 +5,13 @@ APP.Update = function(){
 	    bgGameOver.visible = false;
 	    btnRestart.visible = false;
 
+	    if(APP.Config.GAP > 10){
+	    	APP.Config.GAP = APP.Config.GAPDEFAULT-Math.round((APP.Config.SCORE/100)*8);
+	    	console.log(APP.Config.GAP);
+	    } else {
+	    	APP.Config.GAP = 10;
+	    }
+
 		if(APP.Config.AF <= APP.Config.GAP)
 		{
 			APP.Config.AF++;
@@ -17,12 +24,12 @@ APP.Update = function(){
 
 			var shotType = APP.Config.shotTypes[APP.Gameplay.getRandomInt(0, 3)]
 
-	        var splitShot = APP.Config.SPLIT.create(shotpos+40, 120, shotType.name );
+	        var splitShot = APP.Config.SPLIT.create(shotpos+40, 180, shotType.name );
 
 	        splitShot.power = shotType.power;
 	        splitShot.shotName = shotType.name;
 	        splitShot.body.collideWorldBounds = false;
-	        splitShot.body.gravity.y = 4000;
+	        splitShot.body.gravity.y = 3000;
 	        splitShot.checkWorldBounds = true;
 	        splitShot.events.onOutOfBounds.add(APP.Gameplay.splitOut, this);
 		}
@@ -41,5 +48,8 @@ APP.Update = function(){
 	} else if (APP.Config.STATUS == 'GAMEOVER'){
 	    bgGameOver.visible = true;
 	    btnRestart.visible = true;
+	    if(spaceKey.isDown){
+	    	APP.Gameplay.restart();
+	    }
 	}
 };
