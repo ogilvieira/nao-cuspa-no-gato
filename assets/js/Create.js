@@ -17,5 +17,11 @@ APP.Create = function(){
 		});
 	});
 
+	GAME.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+	GAME.scale.pageAlignHorizontally = true;
+	GAME.scale.pageAlignVertically = true;
+	// GAME.scale.setScreenSize(true);
+	GAME.scale.refresh();
+
 	// GAME.load.start();
 };
