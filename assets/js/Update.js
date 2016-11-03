@@ -1,4 +1,9 @@
 var APP = APP || {};
+
+var shotPos,
+	shotType,
+	splitShot;
+
 APP.Update = function(){
 	if(APP.Config.STATUS == 'PLAY' && APP.Config.PLAYER.isAlive)
 	{
@@ -7,7 +12,6 @@ APP.Update = function(){
 
 	    if(APP.Config.GAP > 10){
 	    	APP.Config.GAP = APP.Config.GAPDEFAULT-Math.round((APP.Config.SCORE/100)*8);
-	    	console.log(APP.Config.GAP);
 	    } else {
 	    	APP.Config.GAP = 10;
 	    }
@@ -19,12 +23,13 @@ APP.Update = function(){
 		else 
 		{
 			APP.Config.AF = 0;
-			var shotpos = (APP.Gameplay.getRandomInt(0, 5)*APP.Config.PLAYER.body.width)+20;
-			APP.Config.GUN.body.position.x = shotpos;
+			
+			shotPos = APP.Gameplay.getShotPos();
+			
+			APP.Config.GUN.body.position.x = shotPos;
 
-			var shotType = APP.Config.shotTypes[APP.Gameplay.getRandomInt(0, 3)]
-
-	        var splitShot = APP.Config.SPLIT.create(shotpos+40, 180, shotType.name );
+			shotType = APP.Config.shotTypes[APP.Gameplay.getRandomInt(0, 3)]
+	        splitShot = APP.Config.SPLIT.create(shotPos+40, 180, shotType.name );
 
 	        splitShot.power = shotType.power;
 	        splitShot.shotName = shotType.name;

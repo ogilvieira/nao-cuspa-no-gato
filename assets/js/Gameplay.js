@@ -40,6 +40,10 @@ APP.Gameplay = (function(Phaser){
     APP.Config.GAP = 40;
   };
 
+  obj.getShotPos = function(){
+    return (APP.Gameplay.getRandomInt(0, 5)*APP.Config.PLAYER.body.width)+20
+  }
+
   obj.init = function(callback){
     GAME.world.height = 960;
     GAME.stage.backgroundColor = "#474747";
