@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "Sobreviva a mortais cuspidas de uma youtuber que possui uma maneira peculiar de alimentar gatos",
   "main": "Gruntfile.js",
-  "dependencies": {
+  "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-uglify": "^2.0.0"
-  },
-  "devDependencies": {
     "grunt-contrib-imagemin": "^1.0.1"
   },
   "scripts": {
@@ -15,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ogilvieira/viihtube-survivor.git"
+    "url": "git+https://github.com/ogilvieira/nao-cuspa-no-gato.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ogilvieira/viihtube-survivor/issues"
+    "url": "https://github.com/ogilvieira/nao-cuspa-no-gato/issues"
   },
-  "homepage": "https://github.com/ogilvieira/viihtube-survivor#readme"
+  "homepage": "https://github.com/ogilvieira/nao-cuspa-no-gato#readme"
 }
